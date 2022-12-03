@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Return Twitter Tweet Source",
+  "description": "Return from what Twitter client a tweet was published",
+  "version": "1.0.0",
+  "homepage_url": "https://github.com/NetherMCtv/ReturnTwitterTweetSource",
+  "permissions": ["*://twitter.com/*", "*://mobile.twitter.com/*", "*://api.twitter.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://mobile.twitter.com/*"],
+      "js": ["./js/content-script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["./js/background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rtts@nethermc",
+      "strict_min_version": "48.0"
+    }
+  }
+}
