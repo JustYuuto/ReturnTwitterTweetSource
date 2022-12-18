@@ -1,7 +1,9 @@
 # Return Twitter Tweet Source
 
-[![GitHub release (latest by date and asset including pre-releases)](https://img.shields.io/github/downloads-pre/NetherMCtv/ReturnTwitterTweetSource/latest/ReturnTwitterTweetSource.crx?label=Downloads&logo=googlechrome&style=for-the-badge)](https://github.com/NetherMCtv/ReturnTwitterTweetSource/releases/latest)
-[![Mozilla Add-on](https://img.shields.io/amo/dw/return-twitter-tweet-source?style=for-the-badge&logo=firefox)](https://addons.mozilla.org/firefox/addon/return-twitter-tweet-source/)
+[![Google Chrome Extension](https://img.shields.io/badge/Download%20from-CRX%20File%20(Google%20Chrome,%20...)-239443)](https://github.com/NetherMCtv/ReturnTwitterTweetSource/releases/latest)
+[![Mozilla Add-on](https://img.shields.io/badge/Download%20from-Firefox%20Addons-ff7139)](https://addons.mozilla.org/firefox/addon/return-twitter-tweet-source/)
+![Opera Add-on](https://img.shields.io/badge/Coming%20soon%20to-Opera%20Addons-f21729)
+[![Edge Add-on](https://img.shields.io/badge/Download%20from-Microsoft%20Edge%20Addons-0882d8)](https://microsoftedge.microsoft.com/addons/detail/oonnjkfkpjfahjlkkocfidflnnmgiloj)
 
 Return from what Twitter client a tweet was published
 
