@@ -1,6 +1,6 @@
 if (!browser) var browser = chrome;
 
-browser.runtime.onMessage.addListener(async (message) => {
+browser.runtime.onMessage.addListener(async (message, sender) => {
     if (message.action === 'SET_SOURCE') {
         const req = await fetch(`https://api.twitter.com/1.1/statuses/show/${message.data.id}.json`, {
             headers: {
@@ -10,7 +10,7 @@ browser.runtime.onMessage.addListener(async (message) => {
 
         const handleCallback = (code) => {
             const interval = setInterval(() => {
-                browser.tabs.executeScript({ code }, (result) => {
+                browser.tabs.executeScript(sender.tab.id, { code }, (result) => {
                     return !!result[0] && clearInterval(interval);
                 });
             }, 500);
