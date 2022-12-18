@@ -7,3 +7,7 @@
 
 Return from what Twitter client a tweet was published
 
+## Known bugs
+
+* Cannot get protected tweets and Twitter circle tweets status due to the Twitter API (returns a 403 HTTP status)
+* When opening a tweet and then an image in the tweet, the source doesn't show 
