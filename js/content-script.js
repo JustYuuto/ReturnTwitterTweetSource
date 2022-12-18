@@ -3,7 +3,7 @@ if (!browser) var browser = chrome;
 const div = document.createElement('div');
 const link = document.createElement('a');
 const dot = document.createElement('span');
-const tweetPathRegex = /\/([a-zA-Z0-9_]+)\/status\/([0-9]+)/gi;
+const tweetPathRegex = /\/([a-zA-Z0-9_]+)\/status\/([0-9]+)(\/photo\/[0-9]+)?/gi;
 
 const createHtml = () => {
     div.classList.add('css-1dbjc4n', 'r-1d09ksm', 'r-1471scf', 'r-18u37iz', 'r-1wbh5a2');
@@ -46,17 +46,18 @@ const apply = () => {
     fetchSource(link);
 }
 
-let currentPath = window.location.pathname;
 setInterval(() => {
-    if (typeof window.location.pathname.match(tweetPathRegex)[0] === 'string') {
-        if (!document.querySelector('.css-1dbjc4n.r-1d09ksm.r-1471scf.r-18u37iz.r-1wbh5a2:nth-child(2)')) {
+    if (!!tweetPathRegex.test(window.location.pathname)) {
+        if (
+            !document.querySelector('.css-1dbjc4n.r-1d09ksm.r-1471scf.r-18u37iz.r-1wbh5a2:nth-child(2)')
+        ) {
             createHtml();
             apply();
         }
     }
 }, 500);
 
-if (!!window.location.pathname.match(tweetPathRegex)) {
+if (!!tweetPathRegex.test(window.location.pathname)) {
     createHtml();
     apply();
 }
